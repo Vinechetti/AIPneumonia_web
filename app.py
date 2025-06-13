@@ -6,7 +6,7 @@ import torch
 import torch.nn as nn
 import torchvision.transforms as T
 import logging
-
+import sys
 
 class pneumonia(nn.Module):
     def __init__(self, num_classes=2):
@@ -56,6 +56,8 @@ ALLOWED_EXTENSIONS = {"jpg", "jpeg"}
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
+sys.modules['__main__'].pneumonia = pneumonia
 
 model_path = "model/model.pth"
 model = torch.load(model_path, weights_only=False)
