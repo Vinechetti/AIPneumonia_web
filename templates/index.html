@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Pneumonia Detector</title>
     <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #1e90ff;
+            font-family: sans-serif;
+        }
+
         body {
             background-color: #1e90ff;
             display: flex;
@@ -51,6 +68,26 @@
             margin-top: 30px;
             font-size: 20px;
             text-align: center;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            color: white;
+            padding: 15px 0;
+            font-family: sans-serif;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .footer a:hover {
+            opacity: 0.8;
         }
     </style>
     <script>
@@ -110,6 +147,15 @@
     </label>
     <button class="button" id="check-btn">Check!</button>
     <div id="output"></div>
+    <footer class="footer">
+        This is a demo of the AI Pneumonia project <br>
+
+        <center>
+            <a href="https://github.com/Vinechetti/AIPneumonia" style="color: white; text-decoration: underline;">
+                Original repo
+            </a>
+        </center>
+    </footer>
 </body>
 
 </html>
