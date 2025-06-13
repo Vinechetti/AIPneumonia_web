@@ -58,7 +58,7 @@ app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 model_path = "model/model.pth"
-model = torch.load(model_path)
+model = torch.load(model_path, weights_only=True)
 model.eval()
 
 data_T = T.Compose(
